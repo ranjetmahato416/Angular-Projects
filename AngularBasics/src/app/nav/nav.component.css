@@ -1,0 +1,22 @@
+.nav{
+    display: flex;
+    background-color: bisque;
+    margin: 0 auto;
+}
+
+.site-name{
+    padding: 15px 15px;
+    color: brown;
+}
+
+.site-menu{
+    margin: 5px 50px;
+    padding: 20px 30px;
+    
+}
+
+a{
+    text-decoration: none;
+    margin: 0 20px;
+    color: black;
+}

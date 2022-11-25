@@ -1,0 +1,41 @@
+<div class="flex flex-wrap justify-center ">
+  <div class="w-full max-w-3xl">
+    <h3 class="text-2xl font-bold my-4 translate-x-48">Form</h3>
+    <form #Form = "ngForm" (ngSubmit)= "getValues(Form.value)" class="bg-white w-full max-w-2xl shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+          Name
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-2 text-gray-800 leading-tight focus:outline-none focus:shadow-outline"  type="text" [(ngModel)]="name" name="name" placeholder="Name">
+      </div>
+      <div class="mb-6">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+          Email
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-2 text-gray-800 mb-3 leading-tight focus:outline-none focus:shadow-outline"  type="email" ngModel name="email" placeholder="Email">
+      </div>
+      <div class="mb-6">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="mobile">
+          Mobile
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-2 text-gray-800 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="text" ngModel name="mobile"  placeholder="Mobile">
+      </div>
+      <div class="mb-6">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="address">
+          Address
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-2 text-gray-800 mb-3 leading-tight focus:outline-none focus:shadow-outline"  type="text" ngModel name="address" placeholder="Address">
+      </div>
+      <div class="flex items-center justify-between">
+        <button class="bg-blue-500 hover:bg-blue-800 text-white font-bold py-2 px-4 mx-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+          Sign In
+        </button>
+        <a class="inline-block align-baseline font-bold text-sm text-blue-600 hover:text-blue-800" href="#">
+          Forgot Password?
+        </a>
+        <a href="#" routerLink="/report">Report</a>
+      </div>
+    </form>
+  </div>
+  
+</div>
