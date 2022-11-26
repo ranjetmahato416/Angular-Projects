@@ -1,4 +1,19 @@
-<div>  
-  <app-form></app-form>
+<!-- <div class="grid w-sm-6">
+  <label for="Form">Form</label>
+  <input (click) = "toggleTag()" class="px-4 mx-4" formControlName="form" type="radio"> 
+</div>
+<div class="grid w-sm-6">
+  <label for="Form">Report</label>
+  <input (click)= "toggleTag()" class="px-4 mx-4" formControlName="report" type="radio"> 
+</div> -->
+<div class="m-8 grid w-sm-3">
+  <a routerLink="">Form</a> <br>
+  <a routerLink="report">Report</a> 
   <router-outlet></router-outlet>
 </div>
+<!-- <ng-template #formBlock>
+  <app-form></app-form>
+</ng-template>
+<ng-template #reportBlock>
+  <app-report></app-report>
+</ng-template> -->

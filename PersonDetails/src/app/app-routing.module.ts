@@ -4,10 +4,10 @@ import { FormComponent } from './Pages/form/form.component';
 import { ReportComponent } from './Pages/report/report.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: "form"},
-  { path: 'form', component: FormComponent },
+  // { path: '', redirectTo: "form"},
+  { path: '', component: FormComponent },
   {path: 'report', component: ReportComponent },
-  {path: '**', redirectTo: "form"}
+  // {path: '**', redirectTo: "form"}
 ];
 
 @NgModule({
