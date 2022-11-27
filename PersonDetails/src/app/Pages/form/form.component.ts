@@ -11,11 +11,12 @@ export class FormComponent{
 
 
   display:boolean = false;
+  emailValue: string = '';
   UserList: any[] = [];
 
    loginForm = new FormGroup({
     name: new FormControl(''),
-    email: new FormControl(''),
+    email: new FormControl(this.emailValue),
     mobile: new FormControl(''),
     address: new FormControl(''),
     state: new FormControl(''),
@@ -29,6 +30,11 @@ export class FormComponent{
 
     console.log(this.loginForm.value);
    };
+
+   onDataChange(eventData: any){
+    // console.log((<HTMLInputElement>eventData.target).value);
+    this.emailValue = (<HTMLInputElement>eventData.target).value;
+   }
 
    onCheckboxChange(event: any){
     if(event.target.checked){
