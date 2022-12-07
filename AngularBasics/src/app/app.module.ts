@@ -5,6 +5,8 @@ import { ContainerComponent } from './Container/container.component';
 import { NavComponent } from './nav/nav.component';
 import { HeaderComponent } from './header/header.component';
 import { NotificationComponent } from './notification/notification.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { NotificationComponent } from './notification/notification.component';
     NotificationComponent
   ],
   imports: [
-  BrowserModule
+  BrowserModule,
+  BrowserAnimationsModule,
+  MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
