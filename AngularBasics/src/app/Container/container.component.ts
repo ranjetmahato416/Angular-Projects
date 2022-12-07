@@ -7,5 +7,6 @@ import { Component } from "@angular/core";
 })
 
 export class ContainerComponent{
+    notifications = 2;
 
 }
