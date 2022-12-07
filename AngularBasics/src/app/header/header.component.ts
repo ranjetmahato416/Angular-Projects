@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+
+  showSpinner = false;
+
+  onClick(){
+    this.showSpinner = true;
+    setTimeout(() => {
+      this.showSpinner = false;
+      
+    }, 3000);
+  }
   
 }

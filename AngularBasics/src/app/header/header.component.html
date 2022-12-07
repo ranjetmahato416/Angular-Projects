@@ -1,5 +1,7 @@
 <div class="header">
     <div class="site-slogan">
+        <mat-spinner *ngIf="showSpinner" color="warn" value="100"></mat-spinner>
+        <button (click)="onClick()">Load</button>
         <h2>Shop For Everything</h2>
     </div>
 </div>
