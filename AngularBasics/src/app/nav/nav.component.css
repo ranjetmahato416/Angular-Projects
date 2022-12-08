@@ -1,6 +1,8 @@
 .navbar {
-    justify-content: space-between;
-}
+    display: flex;
+    justify-content:space-around;
+    margin: 15px auto;
+    }
 span{
     padding-right: 1rem;
 }
@@ -23,4 +25,15 @@ mat-list-item {
 
 mat-grid-tile {
     background-color: rgb(135, 135, 174);
+}
+
+mat-card{
+    max-width: 400px;
+    background-color: rgb(73, 145, 171);
+    color: white;
+}
+
+.header-avatar {
+    background-image: url(../../assets/images/avatar.JPG);
+    background-size: cover;
 }

@@ -1,79 +1,177 @@
 <div>
-    <mat-toolbar color="primary" class="navbar">
-        <mat-icon (click) ="sidenav.toggle()" >menu</mat-icon>
-        <div>Hamro Class</div>
+  <div class="navbar">
+    <mat-tab-group #tabRef>
+      <mat-tab label="Angular">
+        <mat-card>
+          <mat-card-header>
+            <div mat-card-avatar class="header-avatar"></div>
+            <mat-card-title>Anjal Thapa</mat-card-title>
+            <mat-card-subtitle
+              >Academia International College</mat-card-subtitle
+            >
+          </mat-card-header>
+          <img
+            mat-card-image
+            src="../../assets/images/anjal.JPG"
+            alt="Anjal"
+            height="200px"
+          />
+          <mat-card-content>
+            Khaja Ko cost barabar ko sounf khako awastha.
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Like</button>
+            <button mat-button>Share</button>
+          </mat-card-actions>
+        </mat-card></mat-tab
+      >
+      <mat-tab label="React">
+        <mat-card>
+          <mat-card-header>
+            <div mat-card-avatar class="header-avatar"></div>
+            <mat-card-title>Anjal Thapa</mat-card-title>
+            <mat-card-subtitle
+              >Academia International College</mat-card-subtitle
+            >
+          </mat-card-header>
+          <img
+            mat-card-image
+            src="../../assets/images/anjal.JPG"
+            alt="Anjal"
+            height="200px"
+          />
+          <mat-card-content>
+            Khaja Ko cost barabar ko sounf khako awastha.
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Like</button>
+            <button mat-button>Share</button>
+          </mat-card-actions>
+        </mat-card>
+      </mat-tab>
+      <mat-tab label="Vue">
+        <mat-card>
+          <mat-card-header>
+            <div mat-card-avatar class="header-avatar"></div>
+            <mat-card-title>Anjal Thapa</mat-card-title>
+            <mat-card-subtitle
+              >Academia International College</mat-card-subtitle
+            >
+          </mat-card-header>
+          <img
+            mat-card-image
+            src="../../assets/images/anjal.JPG"
+            alt="Anjal"
+            height="200px"
+          />
+          <mat-card-content>
+            Khaja Ko cost barabar ko sounf khako awastha.
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Like</button>
+            <button mat-button>Share</button>
+          </mat-card-actions>
+        </mat-card>
+      </mat-tab>
+    </mat-tab-group>
+    {{ tabRef.selectedIndex }}
+  </div>
+
+  <mat-vertical-stepper linear>
+    <mat-step label="Shipping Address" completed="true">
+        <p>Shipping Address Details</p>
         <div>
-            <span>Home</span>
-            <span>Services</span>
-            <span>About</span>
-            <span>Contact</span>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
         </div>
-    </mat-toolbar>
-    
-    <mat-sidenav-container>
-        <mat-sidenav mode="side" #sidenav [(opened)]="opened">
-            <!-- <mat-nav-list>
+    </mat-step>
+    <mat-step label="Billing Address" completed="false" optional>
+        <p>Billing Address Details</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="Order Details" completed="false">
+        <p>Order Details</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+  </mat-vertical-stepper>
+
+  <mat-sidenav-container>
+    <mat-sidenav mode="side" #sidenav [(opened)]="opened">
+      <!-- <mat-nav-list>
             <mat-icon matListItemIcon>home</mat-icon><a mat-list-item href="#">Home</a>
             <a mat-list-item href="#">About</a>
             <a mat-list-item href="#">Services</a>
             <a mat-list-item href="#">Contact</a>
         </mat-nav-list> -->
-        <mat-list>
-            <mat-list-item>
-                <mat-icon matListItemIcon color="primary">home</mat-icon>
-                <span matLine>Home</span>
-                <p matLine>Line</p>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <mat-icon matListItemIcon color="primary">folder</mat-icon>
-                <span matLine>Folder</span>
-                <p matLine>Line 2</p>
-            </mat-list-item>
-        </mat-list>
+      <mat-list>
+        <mat-list-item>
+          <mat-icon matListItemIcon color="primary">home</mat-icon>
+          <span matLine>Home</span>
+          <p matLine>Line</p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <mat-icon matListItemIcon color="primary">folder</mat-icon>
+          <span matLine>Folder</span>
+          <p matLine>Line 2</p>
+        </mat-list-item>
+      </mat-list>
     </mat-sidenav>
-        
-        <mat-sidenav-content>Profile</mat-sidenav-content>
-    </mat-sidenav-container>
-    <mat-list dense>
-        <mat-list-item>item 1</mat-list-item>
-        <mat-list-item>item 2</mat-list-item>
-        <mat-list-item>item 3</mat-list-item>
-    </mat-list>
 
-    <mat-accordion>
+    <mat-sidenav-content
+      ><mat-button-toggle (click)="onClick()"
+        ><mat-icon>menu</mat-icon></mat-button-toggle
+      ></mat-sidenav-content
+    >
+  </mat-sidenav-container>
+  <mat-list dense>
+    <mat-list-item>item 1</mat-list-item>
+    <mat-list-item>item 2</mat-list-item>
+    <mat-list-item>item 3</mat-list-item>
+  </mat-list>
 
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Angular Framework
-                </mat-panel-title>
-                <mat-panel-description>Angular Template UI Design</mat-panel-description>
-            </mat-expansion-panel-header>
-            <p>This is the best way to learn Angular Material.</p>
-            <mat-action-row>
-            <button color="accent" mat-raised-button>Enroll</button>
-        </mat-action-row>
-    </mat-expansion-panel>
-    
+  <mat-accordion>
     <mat-expansion-panel>
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                Angular Fundamentals
-            </mat-panel-title>
-            <mat-panel-description>Angular Framework for Front-End</mat-panel-description>
-        </mat-expansion-panel-header>
-        <p>This is the best way to learn Angular FrameWork.</p>
-        <mat-action-row>
-            <button mat-fab>Enroll</button>
-        </mat-action-row>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Angular Framework </mat-panel-title>
+        <mat-panel-description
+          >Angular Template UI Design</mat-panel-description
+        >
+      </mat-expansion-panel-header>
+      <p>This is the best way to learn Angular Material.</p>
+      <mat-action-row>
+        <button color="accent" mat-raised-button>Enroll</button>
+      </mat-action-row>
     </mat-expansion-panel>
-</mat-accordion>
 
-    <mat-grid-list cols="2" rowHeight="fit" style="height: 200px" gutterSize="5px">
-        <mat-grid-tile rowspan="2">Tile 1</mat-grid-tile>
-        <mat-grid-tile>Tile 2</mat-grid-tile>
-        <mat-grid-tile>Tile 3</mat-grid-tile>
-    </mat-grid-list>
-    
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Angular Fundamentals </mat-panel-title>
+        <mat-panel-description
+          >Angular Framework for Front-End</mat-panel-description
+        >
+      </mat-expansion-panel-header>
+      <p>This is the best way to learn Angular FrameWork.</p>
+      <mat-action-row>
+        <button mat-fab>Enroll</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <mat-grid-list
+    cols="2"
+    rowHeight="fit"
+    style="height: 200px"
+    gutterSize="5px"
+  >
+    <mat-grid-tile rowspan="2">Tile 1</mat-grid-tile>
+    <mat-grid-tile>Tile 2</mat-grid-tile>
+    <mat-grid-tile>Tile 3</mat-grid-tile>
+  </mat-grid-list>
 </div>
