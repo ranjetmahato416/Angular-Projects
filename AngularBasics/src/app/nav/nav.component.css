@@ -1,22 +1,26 @@
-.nav{
-    display: flex;
-    background-color: bisque;
-    margin: 0 auto;
+.navbar {
+    justify-content: space-between;
+}
+span{
+    padding-right: 1rem;
 }
 
-.site-name{
-    padding: 15px 15px;
-    color: brown;
+mat-sidenav-container {
+    height: 70vh;
+}
+mat-sidenav, mat-sidenav-content{
+    padding: 16px;
 }
 
-.site-menu{
-    margin: 5px 50px;
-    padding: 20px 30px;
-    
+mat-sidenav{
+    background-color: lightcoral;
+    width: 200px;
 }
 
-a{
-    text-decoration: none;
-    margin: 0 20px;
-    color: black;
+mat-list-item {
+    margin-top: 5px;
+}
+
+mat-grid-tile {
+    background-color: rgb(135, 135, 174);
 }

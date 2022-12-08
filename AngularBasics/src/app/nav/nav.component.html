@@ -1,12 +1,79 @@
-<div class="nav">
-    <div class="site-name">
-        <h2>JStore</h2>
-    </div>
-    <div class="site-menu">
-        <button mat-raised-button><a href="#">Home</a></button>
-        <a mat-raised-button href="#">Products</a>
-        <a href="#">Contact</a>
-        <a href="#">About</a>
-        <a href="#">Cart</a>
-    </div>
+<div>
+    <mat-toolbar color="primary" class="navbar">
+        <mat-icon (click) ="sidenav.toggle()" >menu</mat-icon>
+        <div>Hamro Class</div>
+        <div>
+            <span>Home</span>
+            <span>Services</span>
+            <span>About</span>
+            <span>Contact</span>
+        </div>
+    </mat-toolbar>
+    
+    <mat-sidenav-container>
+        <mat-sidenav mode="side" #sidenav [(opened)]="opened">
+            <!-- <mat-nav-list>
+            <mat-icon matListItemIcon>home</mat-icon><a mat-list-item href="#">Home</a>
+            <a mat-list-item href="#">About</a>
+            <a mat-list-item href="#">Services</a>
+            <a mat-list-item href="#">Contact</a>
+        </mat-nav-list> -->
+        <mat-list>
+            <mat-list-item>
+                <mat-icon matListItemIcon color="primary">home</mat-icon>
+                <span matLine>Home</span>
+                <p matLine>Line</p>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <mat-icon matListItemIcon color="primary">folder</mat-icon>
+                <span matLine>Folder</span>
+                <p matLine>Line 2</p>
+            </mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+        
+        <mat-sidenav-content>Profile</mat-sidenav-content>
+    </mat-sidenav-container>
+    <mat-list dense>
+        <mat-list-item>item 1</mat-list-item>
+        <mat-list-item>item 2</mat-list-item>
+        <mat-list-item>item 3</mat-list-item>
+    </mat-list>
+
+    <mat-accordion>
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Angular Framework
+                </mat-panel-title>
+                <mat-panel-description>Angular Template UI Design</mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>This is the best way to learn Angular Material.</p>
+            <mat-action-row>
+            <button color="accent" mat-raised-button>Enroll</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+    
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Angular Fundamentals
+            </mat-panel-title>
+            <mat-panel-description>Angular Framework for Front-End</mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is the best way to learn Angular FrameWork.</p>
+        <mat-action-row>
+            <button mat-fab>Enroll</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+</mat-accordion>
+
+    <mat-grid-list cols="2" rowHeight="fit" style="height: 200px" gutterSize="5px">
+        <mat-grid-tile rowspan="2">Tile 1</mat-grid-tile>
+        <mat-grid-tile>Tile 2</mat-grid-tile>
+        <mat-grid-tile>Tile 3</mat-grid-tile>
+    </mat-grid-list>
+    
 </div>

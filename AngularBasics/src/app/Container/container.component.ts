@@ -7,6 +7,17 @@ import { Component } from "@angular/core";
 })
 
 export class ContainerComponent{
-    notifications = 2;
+    
+
+    showSpinner = false;
+
+  onClick(){
+    this.showSpinner = true;
+    setTimeout(() => {
+      this.showSpinner = false;
+      
+    }, 3000);
+  }
+    
 
 }

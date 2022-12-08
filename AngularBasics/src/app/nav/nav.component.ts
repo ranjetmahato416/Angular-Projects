@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class NavComponent {
 
+  opened = false;
+
+  onClick(){
+    this.opened = true;
+    setTimeout (() => {
+      this.opened =false;
+    }, 3000)
+  }
+
 }

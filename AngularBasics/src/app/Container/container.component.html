@@ -1,68 +1,21 @@
+
+<app-nav></app-nav>
+
 <div class="wrapper">
-    <app-nav></app-nav>
-    <app-header></app-header>
-    <app-notification></app-notification>
+    <div class="header">
+        <div class="site-slogan">
+            <mat-spinner *ngIf="showSpinner" color="warn" value="100"></mat-spinner>
+            <button (click)="onClick()">Load</button>
+            <h2>Shop For Everything</h2>
+        </div>
+    </div>
+    <mat-list>
+        <mat-list-item>
+            <mat-icon matListItemIcon>home</mat-icon>
+            <h3>Home</h3>
+            <p>Line</p>
+        </mat-list-item>
+    </mat-list>
 </div>
 
-
-<input [disabled]="false" type="text">
-<div>
-<button color="primary" mat-button>Sign Up</button>
-<button color="accent" mat-flat-button>Register</button>
-<button color="green" mat-raised-button>Sign Out</button>
-<button color="warn" mat-stroked-button>Delete</button>
-</div>
-
-<div>
-<button color="primary" disableRipple mat-raised-button>Sign Up</button>
-<button color="accent" mat-raised-button>Register</button>
-<button mat-raised-button>Sign Out</button>
-<button color="warn" mat-raised-button>Delete</button>
-<mat-progress-spinner value="100"></mat-progress-spinner>
-
-</div>
-<div>
-    <button mat-icon-button>Icon</button>
-    <button mat-fab>Fab</button>
-    <button mat-mini-fab>MiniFab</button>
-</div>
-<div>
-    <mat-button-toggle #toggleBtn disableRipple>Toggle</mat-button-toggle>
-    {{toggleBtn.checked}}
-</div>
-<div>
-    <mat-button-toggle-group #toggleGroup="matButtonToggleGroup" multiple>
-        <mat-button-toggle value="angular">Angular</mat-button-toggle>
-        <mat-button-toggle value="react">React</mat-button-toggle>
-        <mat-button-toggle value="vue">Vue</mat-button-toggle>
-    </mat-button-toggle-group>
-    {{toggleGroup.value}}
-</div>
-<div>
-    <mat-icon color="primary">account_circle</mat-icon>
-</div>
-<div>
-    <span [matBadge]="notifications" matBadgePosition="below after" >Notification</span>
-</div>
-<div>
-    <span [matBadge]="notifications" [matBadgeHidden]="notifications === 0" matBadgePosition="above after" matBadgeOverlap="false">Notification</span>
-</div>
-<div>
-    <span matBadge="5" matBadgePosition="above before">Notification</span>
-</div>
-<div>
-    <span matBadge="5" matBadgeSize="small">Notification</span>
-</div>
-<div>
-    <span matBadge="5" matBadgeSize="medium">Notification</span>
-</div>
-<div>
-    <span matBadge="5" matBadgeSize="large">Notification</span>
-</div>
-<div>
-    <span matBadge="5" matBadgeColor="accent">Notification</span>
-</div>
-<div>
-    <span matBadge="5" matBadgeColor="warn" matBadgeOverlap="false">Notification</span>
-</div>
 
